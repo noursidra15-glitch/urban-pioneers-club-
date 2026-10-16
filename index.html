@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d35">
+  <link rel="icon" type="image/jpeg" href="urban-pioneers-logo.jpg">
+  <meta name="description" content="URBAN PIONEERS CLUB — نادي رواد العمارة. مجتمع طلابي للتخطيط الحضري والابتكار والعمل الجماعي.">
+  <title>URBAN PIONEERS CLUB | نادي رواد العمارة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="topline"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Urban Pioneers Club home">
+      <img class="brand-logo" src="urban-pioneers-logo.jpg" alt="URBAN PIONEERS CLUB logo">
+      <span class="brand-copy"><strong>URBAN PIONEERS</strong><small data-i18n="clubLabel">نادي رواد العمارة</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" data-i18n="navHome">الرئيسية</a>
+      <a href="#about" data-i18n="navAbout">من نحن</a>
+      <a href="#specialties" data-i18n="navSpecialties">التخصصات</a>
+      <a href="#activities" data-i18n="navActivities">النشاطات</a>
+      <a href="#games">الألعاب</a>
+      <a href="#faq">FAQ</a>
+      <a href="#team" data-i18n="navTeam">الفريق</a>
+      <a href="#contact" data-i18n="navContact">تواصل معنا</a>
+    </nav>
+    <div class="header-actions">
+      <label class="language-picker">
+        <span class="sr-only" data-i18n="languageLabel">اللغة</span>
+        <select id="languageSelect" aria-label="Choose language">
+          <option value="ar">العربية</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+        </select>
+      </label>
+      <a class="button button-small button-gold" href="#join" data-i18n="joinNav">انضم إلينا <span>↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="heroEyebrow">مجتمع طلابي • تخطيط • ابتكار</span></div>
+        <h1 data-i18n-html="heroTitle">نصنع اليوم<br><em>مدن الغد.</em></h1>
+        <p class="hero-lead" data-i18n="heroLead">نادي رواد العمارة مساحة تجمع الطلبة الشغوفين بالعمران والتصميم الحضري، لتحويل الأفكار إلى مبادرات وتجارب ذات أثر.</p>
+        <div class="hero-buttons">
+          <a class="button button-gold" href="#about" data-i18n="discoverBtn">اكتشف النادي <span>↗</span></a>
+          <a class="button button-outline" href="#activities" data-i18n="activitiesBtn">اكتشف نشاطاتنا</a>
+        </div>
+        <div class="hero-footnote"><span class="footline"></span><span data-i18n="heroFootnote">أفكار حضرية. تعاون حقيقي. أثر مستدام.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract urban planning illustration">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="city-card">
+          <div class="map-label"><span class="map-pulse"></span><span data-i18n="mapLabel">مختبر الأفكار الحضرية</span></div>
+          <svg class="city-svg" viewBox="0 0 540 470" role="img" aria-label="Abstract city plan illustration">
+            <defs>
+              <pattern id="smallGrid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M 22 0 L 0 0 0 22" fill="none" stroke="#9eb2ca" stroke-opacity=".18" stroke-width="1"/></pattern>
+              <linearGradient id="blockGrad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#d8b66b"/><stop offset="1" stop-color="#99723b"/></linearGradient>
+            </defs>
+            <rect width="540" height="470" fill="url(#smallGrid)"/>
+            <path d="M-20 90 L560 340 M40 -20 L350 500 M180 -20 L520 400 M-20 390 L520 130" stroke="#e5edf7" stroke-opacity=".7" stroke-width="17" fill="none"/>
+            <path d="M-20 90 L560 340 M40 -20 L350 500 M180 -20 L520 400 M-20 390 L520 130" stroke="#263954" stroke-width="2" stroke-dasharray="6 8" fill="none"/>
+            <g fill="url(#blockGrad)" stroke="#f4d99a" stroke-width="2">
+              <path d="M58 56 L122 81 L96 132 L32 106 Z"/><path d="M144 90 L198 113 L170 164 L116 141 Z"/>
+              <path d="M236 132 L298 159 L274 208 L211 181 Z"/><path d="M368 190 L425 215 L399 266 L342 241 Z"/>
+              <path d="M82 270 L143 296 L117 346 L56 320 Z"/><path d="M191 319 L248 344 L222 394 L165 369 Z"/>
+              <path d="M348 332 L408 358 L383 407 L323 381 Z"/><path d="M419 71 L472 94 L447 143 L394 120 Z"/>
+            </g>
+            <g fill="none" stroke="#e8c878" stroke-width="2">
+              <circle cx="285" cy="275" r="66"/><circle cx="285" cy="275" r="43"/><path d="M285 198 V352 M208 275 H362"/>
+            </g>
+            <circle cx="285" cy="275" r="9" fill="#e8c878"/>
+            <g fill="#e8c878" font-family="Manrope, sans-serif" font-size="11" letter-spacing="2"><text x="24" y="448">URBAN / 01</text><text x="415" y="28">35°42'N</text></g>
+          </svg>
+          <div class="city-card-footer"><span data-i18n="mapFooter">نخطط بفكر، ونبني بالتعاون</span><strong>UP<span>.</span></strong></div>
+        </div>
+        <div class="floating-note note-top"><span class="note-icon">✳</span><span data-i18n="floatOne">إبداع حضري</span></div>
+        <div class="floating-note note-bottom"><span class="note-number">01</span><span data-i18n="floatTwo">من الفكرة إلى المبادرة</span></div>
+        <span class="hero-coordinate coord-one">35°42' N</span><span class="hero-coordinate coord-two">04°32' E</span>
+      </div>
+      <div class="hero-side-label">URBAN PIONEERS CLUB / EST. FOR THE FUTURE</div>
+    </section>
+
+    <section class="ticker" aria-label="Club values">
+      <div class="ticker-track"><span data-i18n="tickerOne">التخطيط الحضري</span><b>✳</b><span data-i18n="tickerTwo">التصميم والابتكار</span><b>✳</b><span data-i18n="tickerThree">التعاون الطلابي</span><b>✳</b><span data-i18n="tickerFour">مدن أكثر استدامة</span><b>✳</b><span data-i18n="tickerOne">التخطيط الحضري</span><b>✳</b><span data-i18n="tickerTwo">التصميم والابتكار</span><b>✳</b></div>
+    </section>
+
+    <section class="section section-wrap about-section" id="about">
+      <div class="section-heading">
+        <div><p class="section-kicker" data-i18n="aboutKicker">01 / من نحن</p><h2 data-i18n-html="aboutTitle">أفكار تتلاقى،<br><em>ومدن تتطور.</em></h2></div>
+        <p class="section-intro" data-i18n="aboutIntro">نؤمن أن التغيير الحضري يبدأ من المعرفة، ويكبر بالتعاون. لذلك نخلق مساحة للطلبة كي يتعلموا، يجرّبوا، ويشاركوا في بناء مستقبل أفضل لمدننا.</p>
+      </div>
+      <div class="about-grid">
+        <article class="about-feature">
+          <div class="feature-number">01</div><div class="feature-symbol">⌘</div>
+          <h3 data-i18n="missionTitle">رسالتنا</h3><p data-i18n="missionText">تشجيع المبادرة الطلابية وتطوير المهارات في مجالات العمران والتخطيط والتصميم والعمل الجماعي.</p>
+        </article>
+        <article class="about-feature feature-highlight">
+          <div class="feature-number">02</div><div class="feature-symbol">↗</div>
+          <h3 data-i18n="visionTitle">رؤيتنا</h3><p data-i18n="visionText">مجتمع طلابي ملهم يربط المعرفة الأكاديمية بالتجربة الميدانية والحلول الحضرية المبتكرة.</p>
+        </article>
+        <article class="about-feature">
+          <div class="feature-number">03</div><div class="feature-symbol">✳</div>
+          <h3 data-i18n="valuesTitle">قيمنا</h3><p data-i18n="valuesText">الإبداع، التعاون، المسؤولية، تبادل المعرفة، واحترام خصوصية كل مدينة واحتياجات سكانها.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section specialties-section" id="specialties">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div><p class="section-kicker" data-i18n="specKicker">02 / مجالاتنا</p><h2 data-i18n-html="specTitle">تخصصات تصنع<br><em>فرقًا في المدينة.</em></h2></div>
+          <p class="section-intro" data-i18n="specIntro">نتقاطع حول المدينة من زوايا مختلفة؛ من التخطيط والتصميم إلى إدارة المشاريع والتقنيات الحضرية.</p>
+        </div>
+        <div class="specialty-grid">
+          <article class="specialty-card"><div class="specialty-top"><span class="specialty-icon">⌖</span><span class="specialty-index">01</span></div><h3 data-i18n="urbanismTitle">العمران والتخطيط الحضري</h3><p data-i18n="urbanismText">فهم تنظيم المجال، استعمالات الأرض، وتطور الأحياء والمدن.</p><div class="tag-row"><span>Urbanisme</span><span>Planning</span></div></article>
+          <article class="specialty-card"><div class="specialty-top"><span class="specialty-icon">▱</span><span class="specialty-index">02</span></div><h3 data-i18n="architectureTitle">الهندسة المعمارية</h3><p data-i18n="architectureText">التفكير في الفضاءات والمباني وعلاقتها بالإنسان والمحيط.</p><div class="tag-row"><span>Architecture</span><span>Design</span></div></article>
+          <article class="specialty-card"><div class="specialty-top"><span class="specialty-icon">◫</span><span class="specialty-index">03</span></div><h3 data-i18n="constructionTitle">إدارة مشاريع البناء</h3><p data-i18n="constructionText">التخطيط للمشاريع، التنسيق بين المتدخلين، ومتابعة الوقت والموارد والجودة.</p><div class="tag-row"><span>Construction</span><span>Project Management</span></div></article>
+          <article class="specialty-card"><div class="specialty-top"><span class="specialty-icon">⌘</span><span class="specialty-index">04</span></div><h3 data-i18n="socleTitle">القاعدة المشتركة GTU</h3><p data-i18n="socleText">تكوين أساسي في السنة الأولى يمهّد لمواصلة الدراسة في مسارات التقنيات الحضرية.</p><div class="tag-row"><span>Socle Commun</span><span>GTU</span></div></article>
+          <article class="specialty-card"><div class="specialty-top"><span class="specialty-icon">⌁</span><span class="specialty-index">05</span></div><h3 data-i18n="genieTitle">الهندسة الحضرية</h3><p data-i18n="genieText">مقاربة تقنية للمجال الحضري وشبكاته وتجهيزاته وطرق تسييره.</p><div class="tag-row"><span>Génie Urbain</span><span>Urban Systems</span></div></article>
+          <article class="specialty-card"><div class="specialty-top"><span class="specialty-icon">◎</span><span class="specialty-index">06</span></div><h3 data-i18n="villeTitle">تسيير المدينة</h3><p data-i18n="villeText">فهم تحديات تسيير المدينة وتحسين الخدمات والبيئة الحضرية.</p><div class="tag-row"><span>Gestion de la Ville</span><span>City Management</span></div></article>
+        </div>
+        <p class="disclaimer" data-i18n="specNote">ملاحظة: هذه نبذات تعريفية عامة. يُرجى الرجوع إلى دليل التكوين الرسمي للجامعة لتأكيد المسارات والبرامج المعتمدة.</p>
+      </div>
+    </section>
+
+    <section class="visual-gallery section-wrap" aria-label="Urban planning gallery">
+      <div class="gallery-heading"><p class="section-kicker">URBAN INSPIRATION / 01</p><h2>المدينة تُقرأ من <em>كل زاوية.</em></h2><p>من الخرائط إلى المباني، ومن الفضاء العام إلى حياة الناس.</p></div>
+      <div class="gallery-grid">
+        <figure class="gallery-image gallery-image-wide"><img src="assets/urban-planning.svg" alt="Urban planning model and city blocks" loading="lazy"><figcaption>URBAN PLANNING <span>01</span></figcaption></figure>
+        <figure class="gallery-image"><img src="assets/architecture.svg" alt="Contemporary architecture and building design" loading="lazy"><figcaption>ARCHITECTURE <span>02</span></figcaption></figure>
+        <figure class="gallery-image"><img src="assets/green-city.svg" alt="Green public spaces and sustainable city" loading="lazy"><figcaption>PUBLIC SPACE <span>03</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section section-wrap activities-section" id="activities">
+      <div class="section-heading">
+        <div><p class="section-kicker" data-i18n="activityKicker">03 / ماذا نفعل؟</p><h2 data-i18n-html="activityTitle">نتعلم معًا،<br><em>ونترك أثرًا.</em></h2></div>
+        <p class="section-intro" data-i18n="activityIntro">مساحات للتجربة والتواصل وتبادل المعرفة، تتشكل حسب اهتمامات الطلبة وأفكارهم.</p>
+      </div>
+      <div class="activity-grid">
+        <article class="activity-card activity-large"><div class="activity-visual visual-workshop"><span class="visual-cross">✳</span><span class="visual-caption">FIELD / LAB</span><div class="visual-lines"></div></div><div class="activity-content"><span class="activity-label" data-i18n="activityTypeOne">تعلم تطبيقي</span><h3 data-i18n="workshopsTitle">ورشات وتكوينات</h3><p data-i18n="workshopsText">جلسات عملية لتبادل المهارات في أدوات التخطيط والتصميم والتمثيل الحضري.</p></div></article>
+        <article class="activity-card"><div class="activity-visual visual-field"><span class="field-ring"></span><span class="visual-caption">OBSERVE / EXPLORE</span><span class="field-pin">⌖</span></div><div class="activity-content"><span class="activity-label" data-i18n="activityTypeTwo">تعلم ميداني</span><h3 data-i18n="fieldTitle">خرجات ميدانية</h3><p data-i18n="fieldText">قراءة المكان وملاحظة تحدياته وربط الدراسة بالواقع.</p></div></article>
+        <article class="activity-card"><div class="activity-visual visual-community"><div class="community-orbit"></div><span class="community-star">✳</span><span class="visual-caption">CONNECT / CREATE</span></div><div class="activity-content"><span class="activity-label" data-i18n="activityTypeThree">تعاون وإبداع</span><h3 data-i18n="communityTitle">مبادرات ومسابقات</h3><p data-i18n="communityText">أفكار جماعية ومبادرات طلابية تفتح المجال للمشاركة والابتكار.</p></div></article>
+      </div>
+      <div class="activity-note"><span class="note-bullet"></span><p data-i18n="activityNote">سيتم الإعلان عن الفعاليات القادمة عبر قنوات النادي الرسمية.</p><a href="#contact" data-i18n="followLink">تابع أخبارنا <span>↗</span></a></div>
+    </section>
+
+    <section class="team-section" id="team">
+      <div class="section-wrap team-inner team-layout">
+        <div class="team-copy"><p class="section-kicker" data-i18n="teamKicker">04 / مجتمعنا</p><h2 data-i18n-html="teamTitle">وراء كل فكرة،<br><em>فريق يؤمن بها.</em></h2><p data-i18n="teamText">رواد العمارة مجتمع من الطلبة الذين يجمعهم الفضول، روح المبادرة، والرغبة في التعلم وصناعة تجربة جامعية أغنى.</p><div class="team-art team-art-compact"><div class="team-grid-lines"></div><div class="team-monogram">UP<span>.</span></div><div class="team-caption">URBAN PIONEERS CLUB</div></div></div>
+        <div class="team-roster">
+          <div class="roster-block"><p class="roster-label">LEADERSHIP / القيادة</p><article class="member-card leader-card"><span class="member-number">01</span><div><h3>عبدلي هلال</h3><p>رئيس النادي <span>• Club President</span></p></div><span class="member-symbol">✦</span></article><article class="member-card leader-card"><span class="member-number">02</span><div><h3>هاشمي نور سلسبيل</h3><p>نائبة رئيس النادي <span>• Vice President</span></p></div><span class="member-symbol">✦</span></article></div>
+          <div class="roster-block"><p class="roster-label">FOUNDING MEMBERS / الأعضاء المؤسسون</p><div class="members-grid">
+            <div class="member-card"><span class="member-number">03</span><h3>حمدان صفية</h3></div><div class="member-card"><span class="member-number">04</span><h3>بلخيري أحلام نور الهدى</h3></div>
+            <div class="member-card"><span class="member-number">05</span><h3>بلعريبي فردوس</h3></div><div class="member-card"><span class="member-number">06</span><h3>بلحاج ريهام زينب</h3></div>
+            <div class="member-card"><span class="member-number">07</span><h3>محمودي أمينة نور</h3></div><div class="member-card"><span class="member-number">08</span><h3>مهدي اسماعيل</h3></div>
+            <div class="member-card"><span class="member-number">09</span><h3>بلمهدي عبد الرحيم اسماعيل</h3></div><div class="member-card"><span class="member-number">10</span><h3>بلعجال نذير ضياء الدين</h3></div>
+            <div class="member-card"><span class="member-number">11</span><h3>حمدي ابراهيم الخليل</h3></div><div class="member-card"><span class="member-number">12</span><h3>فرج الله مريم</h3></div>
+            <div class="member-card"><span class="member-number">13</span><h3>زيدور الياس</h3></div><div class="member-card"><span class="member-number">14</span><h3>برازة ندى</h3></div>
+          </div></div>
+          <div class="roster-block advisors"><p class="roster-label">FACULTY ADVISORS / الأساتذة المشرفون</p><div class="advisor-grid"><article class="member-card advisor-card"><span class="advisor-icon">✧</span><div><h3>د- حجاب مداني</h3><p>أستاذ مشرف</p></div></article><article class="member-card advisor-card"><span class="advisor-icon">✧</span><div><h3>د- زحاف الأمين</h3><p>أستاذ مشرف</p></div></article></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="games-section section-wrap" id="games">
+      <div class="section-heading"><div><p class="section-kicker">07 / LEARN BY PLAYING</p><h2>نكتشف تخصصاتنا،<br><em>ونربط بينها.</em></h2></div><p class="section-intro">ألعاب قصيرة تبيّن كيف تتكامل التخصصات في مشروع حضري واحد. اختبر معلوماتك ثم اكتشف العلاقة بين المجالات.</p></div>
+      <div class="game-tabs" role="tablist" aria-label="Interactive games"><button class="game-tab active" data-game="match">اربط التخصص بالمهمة</button><button class="game-tab" data-game="scenario">من يحتاج من؟</button><button class="game-tab" data-game="quiz">اختبار سريع</button></div>
+      <div class="game-panel" id="gamePanel" aria-live="polite">
+        <div class="game-intro"><span class="game-icon">⌘</span><div><h3 id="gameTitle">اربط التخصص بالمهمة</h3><p id="gameDescription">اختار التخصص المناسب لكل مهمة حضرية.</p></div></div>
+        <div id="gameContent"></div><div class="game-feedback" id="gameFeedback" role="status"></div><div class="game-actions"><button class="button button-gold" id="checkGame">تحقق من الإجابات</button><button class="button button-outline-dark" id="resetGame">إعادة اللعب ↻</button></div>
+      </div>
+    </section>
+
+    <section class="faq-section section-wrap" id="faq">
+      <div class="section-heading"><div><p class="section-kicker">08 / FAQ</p><h2>أسئلة تتكرر،<br><em>وأجوبة واضحة.</em></h2></div><p class="section-intro">معلومات أساسية حول النادي وطريقة المشاركة. التفاصيل المتعلقة بالنشاطات تُعلن عبر قنوات النادي الرسمية.</p></div>
+      <div class="faq-list">
+        <details class="faq-item"><summary>ما هو نادي رواد العمارة؟</summary><p>نادي طلابي يهتم بالعمران والتصميم والتقنيات الحضرية، ويشجع التعلم التطبيقي والتعاون والمبادرات الطلابية.</p></details>
+        <details class="faq-item"><summary>من يمكنه المشاركة في نشاطات النادي؟</summary><p>يمكن للطلبة المهتمين بمجالات المدينة والعمران والتصميم والعمل الجماعي التواصل مع النادي لمعرفة شروط وآليات المشاركة المتاحة.</p></details>
+        <details class="faq-item"><summary>هل يجب أن أكون محترفًا في التصميم أو البرامج؟</summary><p>ليس بالضرورة. بعض الأنشطة يمكن أن تكون للتعلم وتبادل المعرفة، ويُعلن عن المتطلبات الخاصة بكل ورشة عند تنظيمها.</p></details>
+        <details class="faq-item"><summary>كيف أعرف مواعيد النشاطات القادمة؟</summary><p>تابعوا قنوات النادي الرسمية أو صفحة الروابط الموحدة في قسم التواصل، حيث تُنشر المستجدات عند توفرها.</p></details>
+        <details class="faq-item"><summary>هل الألعاب التعليمية امتحانات رسمية؟</summary><p>لا، هي أنشطة تفاعلية مبسطة للتعلم والتسلية وليست بديلًا عن المقررات أو التقييمات الجامعية الرسمية.</p></details>
+        <details class="faq-item"><summary>كيف أتواصل أو أطلب التعاون مع النادي؟</summary><p>استخدموا البريد الإلكتروني أو رابط التواصل الموحد الموجود في نهاية الصفحة.</p></details>
+      </div>
+    </section>
+    <section class="join-section section-wrap" id="join">
+      <div class="join-box"><div class="join-decoration">UP<span>.</span></div><div class="join-copy"><p class="section-kicker" data-i18n="joinKicker">05 / انضم إلينا</p><h2 data-i18n-html="joinTitle">لديك فكرة؟<br><em>لنعمل عليها معًا.</em></h2><p data-i18n="joinText">إذا كنت مهتمًا بالعمران أو التصميم أو العمل الجماعي، فمكانك معنا. تواصل مع النادي لمعرفة طريقة الانضمام.</p><a class="button button-gold" href="mailto:urbanpioneersclub@gmail.com?subject=Urban%20Pioneers%20Club%20-%20Membership" data-i18n="joinButton">تواصل للانضمام <span>↗</span></a></div><div class="join-side"><div class="join-coordinate">35°42' N<br>04°32' E</div><p data-i18n="joinSideText">الأفكار الصغيرة<br>تصنع مستقبلًا كبيرًا.</p><span class="join-star">✳</span></div></div>
+    </section>
+
+    <section class="contact-section section-wrap" id="contact">
+      <div class="contact-heading"><p class="section-kicker" data-i18n="contactKicker">06 / ابقَ على تواصل</p><h2 data-i18n-html="contactTitle">خلّينا <em>نتواصل.</em></h2><p data-i18n="contactText">للاستفسارات والتعاون والمشاركة في أنشطة النادي، يسعدنا تواصلك معنا.</p></div>
+      <div class="contact-links">
+        <a href="https://solo.to/urban_pioneers_msila" target="_blank" rel="noopener noreferrer" class="contact-link"><span class="contact-icon">↗</span><span><small>All official links / كل روابطنا</small><strong>solo.to/urban_pioneers_msila</strong></span><span class="contact-arrow">↗</span></a>
+        <a href="mailto:urbanpioneersclub@gmail.com" class="contact-link"><span class="contact-icon">✉</span><span><small data-i18n="emailLabel">البريد الإلكتروني</small><strong>urbanpioneersclub@gmail.com</strong></span><span class="contact-arrow">↗</span></a>
+        <div class="contact-qr"><img src="assets/contact-qr.png" alt="QR code for Urban Pioneers Club contact links" loading="lazy"><div><strong>امسح الرمز للتواصل</strong><p>افتح جميع الروابط الرسمية للنادي من مكان واحد.</p><a href="https://solo.to/urban_pioneers_msila" target="_blank" rel="noopener noreferrer">افتح صفحة الروابط ↗</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main"><a class="brand footer-brand" href="#home"><img class="brand-logo footer-logo" src="urban-pioneers-logo.jpg" alt="URBAN PIONEERS CLUB logo"><span class="brand-copy"><strong>URBAN PIONEERS</strong><small data-i18n="clubLabel">نادي رواد العمارة</small></span></a><p data-i18n="footerPhrase">نفكر في المدينة، ونبني المستقبل معًا.</p><a class="back-top" href="#home" data-i18n="backTop">العودة للأعلى ↑</a></div>
+    <div class="footer-bottom"><span>© <span id="currentYear"></span> URBAN PIONEERS CLUB</span><span data-i18n="footerNote">مجتمع طلابي • تخطيط • ابتكار</span><span class="copyright-owner">حقوق الملكية الفكرية: المهندسة العمرانية هاشمي نور سلسبيل</span></div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
