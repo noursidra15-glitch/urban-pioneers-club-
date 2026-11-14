@@ -1,173 +1,145 @@
-const translations = {
-  ar: {
-    clubLabel:"نادي رواد العمارة", languageLabel:"اللغة", navHome:"الرئيسية", navAbout:"من نحن", navSpecialties:"التخصصات", navActivities:"النشاطات", navTeam:"الفريق", navContact:"تواصل معنا", joinNav:"انضم إلينا",
-    heroEyebrow:"مجتمع طلابي • تخطيط • ابتكار", heroTitle:"نصنع اليوم<br><em>مدن الغد.</em>", heroLead:"نادي رواد العمارة مساحة تجمع الطلبة الشغوفين بالعمران والتصميم الحضري، لتحويل الأفكار إلى مبادرات وتجارب ذات أثر.", discoverBtn:"اكتشف النادي", activitiesBtn:"اكتشف نشاطاتنا", heroFootnote:"أفكار حضرية. تعاون حقيقي. أثر مستدام.", mapLabel:"مختبر الأفكار الحضرية", mapFooter:"نخطط بفكر، ونبني بالتعاون", floatOne:"إبداع حضري", floatTwo:"من الفكرة إلى المبادرة",
-    tickerOne:"التخطيط الحضري",tickerTwo:"التصميم والابتكار",tickerThree:"التعاون الطلابي",tickerFour:"مدن أكثر استدامة",
-    aboutKicker:"01 / من نحن",aboutTitle:"أفكار تتلاقى،<br><em>ومدن تتطور.</em>",aboutIntro:"نؤمن أن التغيير الحضري يبدأ من المعرفة، ويكبر بالتعاون. لذلك نخلق مساحة للطلبة كي يتعلموا، يجرّبوا، ويشاركوا في بناء مستقبل أفضل لمدننا.",missionTitle:"رسالتنا",missionText:"تشجيع المبادرة الطلابية وتطوير المهارات في مجالات العمران والتخطيط والتصميم والعمل الجماعي.",visionTitle:"رؤيتنا",visionText:"مجتمع طلابي ملهم يربط المعرفة الأكاديمية بالتجربة الميدانية والحلول الحضرية المبتكرة.",valuesTitle:"قيمنا",valuesText:"الإبداع، التعاون، المسؤولية، تبادل المعرفة، واحترام خصوصية كل مدينة واحتياجات سكانها.",
-    specKicker:"02 / مجالاتنا",specTitle:"تخصصات تصنع<br><em>فرقًا في المدينة.</em>",specIntro:"نتقاطع حول المدينة من زوايا مختلفة؛ من التخطيط والتصميم إلى إدارة المشاريع والتقنيات الحضرية.",urbanismTitle:"العمران والتخطيط الحضري",urbanismText:"فهم تنظيم المجال، استعمالات الأرض، وتطور الأحياء والمدن.",architectureTitle:"الهندسة المعمارية",architectureText:"التفكير في الفضاءات والمباني وعلاقتها بالإنسان والمحيط.",constructionTitle:"إدارة مشاريع البناء",constructionText:"التخطيط للمشاريع، التنسيق بين المتدخلين، ومتابعة الوقت والموارد والجودة.",socleTitle:"القاعدة المشتركة GTU",socleText:"تكوين أساسي في السنة الأولى يمهّد لمواصلة الدراسة في مسارات التقنيات الحضرية.",genieTitle:"الهندسة الحضرية",genieText:"مقاربة تقنية للمجال الحضري وشبكاته وتجهيزاته وطرق تسييره.",villeTitle:"تسيير المدينة",villeText:"فهم تحديات تسيير المدينة وتحسين الخدمات والبيئة الحضرية.",specNote:"ملاحظة: هذه نبذات تعريفية عامة. يُرجى الرجوع إلى دليل التكوين الرسمي للجامعة لتأكيد المسارات والبرامج المعتمدة.",
-    activityKicker:"03 / ماذا نفعل؟",activityTitle:"نتعلم معًا،<br><em>ونترك أثرًا.</em>",activityIntro:"مساحات للتجربة والتواصل وتبادل المعرفة، تتشكل حسب اهتمامات الطلبة وأفكارهم.",activityTypeOne:"تعلم تطبيقي",workshopsTitle:"ورشات وتكوينات",workshopsText:"جلسات عملية لتبادل المهارات في أدوات التخطيط والتصميم والتمثيل الحضري.",activityTypeTwo:"تعلم ميداني",fieldTitle:"خرجات ميدانية",fieldText:"قراءة المكان وملاحظة تحدياته وربط الدراسة بالواقع.",activityTypeThree:"تعاون وإبداع",communityTitle:"مبادرات ومسابقات",communityText:"أفكار جماعية ومبادرات طلابية تفتح المجال للمشاركة والابتكار.",activityNote:"سيتم الإعلان عن الفعاليات القادمة عبر قنوات النادي الرسمية.",followLink:"تابع أخبارنا",
-    teamKicker:"04 / مجتمعنا",teamTitle:"وراء كل فكرة،<br><em>فريق يؤمن بها.</em>",teamText:"رواد العمارة مجتمع من الطلبة الذين يجمعهم الفضول، روح المبادرة، والرغبة في التعلم وصناعة تجربة جامعية أغنى.",teamLink:"كن جزءًا من الفريق",teamCaption:"فكرة واحدة قد تبدأ تغييرًا.",
-    joinKicker:"05 / انضم إلينا",joinTitle:"لديك فكرة؟<br><em>لنعمل عليها معًا.</em>",joinText:"إذا كنت مهتمًا بالعمران أو التصميم أو العمل الجماعي، فمكانك معنا. تواصل مع النادي لمعرفة طريقة الانضمام.",joinButton:"تواصل للانضمام",joinSideText:"الأفكار الصغيرة<br>تصنع مستقبلًا كبيرًا.",
-    contactKicker:"06 / ابقَ على تواصل",contactTitle:"خلّينا <em>نتواصل.</em>",contactText:"للاستفسارات والتعاون والمشاركة في أنشطة النادي، يسعدنا تواصلك معنا.",emailLabel:"البريد الإلكتروني",socialPlaceholder:"أضف رابط الحساب الرسمي",footerPhrase:"نفكر في المدينة، ونبني المستقبل معًا.",backTop:"العودة للأعلى ↑",footerNote:"مجتمع طلابي • تخطيط • ابتكار"
-  },
-  en: {
-    clubLabel:"Architecture & Urbanism Student Club",languageLabel:"Language",navHome:"Home",navAbout:"About",navSpecialties:"Study fields",navActivities:"Activities",navTeam:"Community",navContact:"Contact",joinNav:"Join us",
-    heroEyebrow:"STUDENT COMMUNITY • PLANNING • INNOVATION",heroTitle:"Shaping today,<br><em>cities of tomorrow.</em>",heroLead:"Urban Pioneers Club brings together students passionate about urbanism and city design, turning ideas into meaningful initiatives and experiences.",discoverBtn:"Discover the club",activitiesBtn:"Explore activities",heroFootnote:"Urban ideas. Real collaboration. Lasting impact.",mapLabel:"Urban ideas lab",mapFooter:"Plan with purpose. Build together.",floatOne:"Urban creativity",floatTwo:"From idea to initiative",
-    tickerOne:"URBAN PLANNING",tickerTwo:"DESIGN & INNOVATION",tickerThree:"STUDENT COLLABORATION",tickerFour:"MORE SUSTAINABLE CITIES",
-    aboutKicker:"01 / WHO WE ARE",aboutTitle:"Ideas connect,<br><em>cities evolve.</em>",aboutIntro:"We believe urban change begins with knowledge and grows through collaboration. We create space for students to learn, experiment, and help shape a better future for our cities.",missionTitle:"Our mission",missionText:"Encourage student initiatives and develop skills in urbanism, planning, design, and teamwork.",visionTitle:"Our vision",visionText:"An inspiring student community connecting academic knowledge with field experience and innovative urban solutions.",valuesTitle:"Our values",valuesText:"Creativity, collaboration, responsibility, knowledge sharing, and respect for each city's identity and residents' needs.",
-    specKicker:"02 / OUR FIELDS",specTitle:"Fields that make<br><em>a city-wide difference.</em>",specIntro:"We explore cities from different perspectives—from planning and design to project management and urban techniques.",urbanismTitle:"Urbanism & Urban Planning",urbanismText:"Understanding spatial organization, land use, and how neighbourhoods and cities evolve.",architectureTitle:"Architecture",architectureText:"Exploring spaces and buildings and their relationship with people and their surroundings.",constructionTitle:"Construction Project Management",constructionText:"Planning projects, coordinating stakeholders, and monitoring time, resources, and quality.",socleTitle:"GTU Common Core",socleText:"A first-year foundation that prepares students to continue along urban techniques study pathways.",genieTitle:"Urban Engineering",genieText:"A technical approach to urban areas, networks, infrastructure, and their management.",villeTitle:"City Management",villeText:"Understanding city management challenges and improving urban services and environments.",specNote:"Note: These are general introductions. Refer to the university's official study guide to confirm approved pathways and curricula.",
-    activityKicker:"03 / WHAT WE DO",activityTitle:"Learn together,<br><em>make an impact.</em>",activityIntro:"Spaces for experimentation, connection, and knowledge sharing shaped by students' interests and ideas.",activityTypeOne:"PRACTICAL LEARNING",workshopsTitle:"Workshops & training",workshopsText:"Hands-on sessions to share skills in planning, design, and urban representation tools.",activityTypeTwo:"FIELD LEARNING",fieldTitle:"Field visits",fieldText:"Reading places, observing their challenges, and connecting study with reality.",activityTypeThree:"COLLABORATION & CREATIVITY",communityTitle:"Initiatives & competitions",communityText:"Collective ideas and student initiatives that invite participation and innovation.",activityNote:"Upcoming events will be announced through the club's official channels.",followLink:"Follow our updates",
-    teamKicker:"04 / OUR COMMUNITY",teamTitle:"Behind every idea,<br><em>a team that believes.</em>",teamText:"Urban Pioneers is a student community united by curiosity, initiative, and a desire to learn and create a richer university experience.",teamLink:"Become part of the team",teamCaption:"One idea can start a change.",
-    joinKicker:"05 / JOIN US",joinTitle:"Have an idea?<br><em>Let's build it together.</em>",joinText:"If you are interested in urbanism, design, or teamwork, there is a place for you here. Contact the club to learn how to join.",joinButton:"Contact us to join",joinSideText:"Small ideas<br>can shape big futures.",
-    contactKicker:"06 / STAY CONNECTED",contactTitle:"Let's <em>connect.</em>",contactText:"For questions, collaboration, or participation in club activities, we'd be happy to hear from you.",emailLabel:"Email",socialPlaceholder:"Add the official account link",footerPhrase:"Thinking about cities. Building the future together.",backTop:"Back to top ↑",footerNote:"STUDENT COMMUNITY • PLANNING • INNOVATION"
-  },
-  fr: {
-    clubLabel:"Club étudiant d’urbanisme",languageLabel:"Langue",navHome:"Accueil",navAbout:"À propos",navSpecialties:"Formations",navActivities:"Activités",navTeam:"Communauté",navContact:"Contact",joinNav:"Nous rejoindre",
-    heroEyebrow:"COMMUNAUTÉ ÉTUDIANTE • PLANIFICATION • INNOVATION",heroTitle:"Construire aujourd’hui<br><em>les villes de demain.</em>",heroLead:"Le club Urban Pioneers réunit des étudiants passionnés par l’urbanisme et la conception urbaine afin de transformer les idées en initiatives porteuses de sens.",discoverBtn:"Découvrir le club",activitiesBtn:"Découvrir nos activités",heroFootnote:"Idées urbaines. Collaboration réelle. Impact durable.",mapLabel:"Laboratoire d’idées urbaines",mapFooter:"Penser avec sens. Construire ensemble.",floatOne:"Créativité urbaine",floatTwo:"De l’idée à l’initiative",
-    tickerOne:"PLANIFICATION URBAINE",tickerTwo:"DESIGN ET INNOVATION",tickerThree:"COLLABORATION ÉTUDIANTE",tickerFour:"DES VILLES PLUS DURABLES",
-    aboutKicker:"01 / QUI SOMMES-NOUS",aboutTitle:"Les idées se rencontrent,<br><em>les villes évoluent.</em>",aboutIntro:"Nous croyons que le changement urbain commence par la connaissance et se développe grâce à la collaboration. Nous offrons aux étudiants un espace pour apprendre, expérimenter et contribuer à un meilleur avenir urbain.",missionTitle:"Notre mission",missionText:"Encourager les initiatives étudiantes et développer les compétences en urbanisme, planification, design et travail collectif.",visionTitle:"Notre vision",visionText:"Une communauté étudiante inspirante reliant les connaissances académiques à l’expérience de terrain et aux solutions urbaines innovantes.",valuesTitle:"Nos valeurs",valuesText:"Créativité, collaboration, responsabilité, partage des connaissances et respect de l’identité de chaque ville et des besoins de ses habitants.",
-    specKicker:"02 / NOS DOMAINES",specTitle:"Des domaines qui font<br><em>évoluer la ville.</em>",specIntro:"Nous abordons la ville sous différents angles : planification, conception, gestion de projets et techniques urbaines.",urbanismTitle:"Urbanisme et planification urbaine",urbanismText:"Comprendre l’organisation spatiale, l’usage des sols et l’évolution des quartiers et des villes.",architectureTitle:"Architecture",architectureText:"Étudier les espaces et les bâtiments ainsi que leur relation avec les personnes et leur environnement.",constructionTitle:"Management de projets de construction",constructionText:"Planifier les projets, coordonner les intervenants et suivre les délais, les ressources et la qualité.",socleTitle:"Socle commun GTU",socleText:"Une première année de formation fondamentale préparant à la poursuite des études dans les parcours des techniques urbaines.",genieTitle:"Génie urbain",genieText:"Une approche technique des espaces urbains, des réseaux, des équipements et de leur gestion.",villeTitle:"Gestion de la ville",villeText:"Comprendre les enjeux de gestion urbaine et améliorer les services et l’environnement de la ville.",specNote:"Remarque : ces présentations sont générales. Consultez le guide officiel de l’université pour confirmer les parcours et programmes accrédités.",
-    activityKicker:"03 / NOS ACTIONS",activityTitle:"Apprendre ensemble,<br><em>agir durablement.</em>",activityIntro:"Des espaces d’expérimentation, de rencontre et de partage des connaissances selon les idées et les intérêts des étudiants.",activityTypeOne:"APPRENTISSAGE PRATIQUE",workshopsTitle:"Ateliers et formations",workshopsText:"Des séances pratiques pour partager des compétences en planification, conception et représentation urbaine.",activityTypeTwo:"APPRENTISSAGE SUR LE TERRAIN",fieldTitle:"Sorties de terrain",fieldText:"Observer les lieux, comprendre leurs enjeux et relier les études à la réalité.",activityTypeThree:"COLLABORATION ET CRÉATIVITÉ",communityTitle:"Initiatives et concours",communityText:"Des idées collectives et des initiatives étudiantes favorisant la participation et l’innovation.",activityNote:"Les prochains événements seront annoncés sur les canaux officiels du club.",followLink:"Suivre nos actualités",
-    teamKicker:"04 / NOTRE COMMUNAUTÉ",teamTitle:"Derrière chaque idée,<br><em>une équipe engagée.</em>",teamText:"Urban Pioneers est une communauté étudiante unie par la curiosité, l’initiative et le désir d’apprendre et d’enrichir l’expérience universitaire.",teamLink:"Rejoindre l’équipe",teamCaption:"Une idée peut amorcer le changement.",
-    joinKicker:"05 / NOUS REJOINDRE",joinTitle:"Une idée en tête ?<br><em>Construisons-la ensemble.</em>",joinText:"Si l’urbanisme, le design ou le travail collectif vous intéressent, vous avez votre place parmi nous. Contactez le club pour connaître les modalités d’adhésion.",joinButton:"Nous contacter pour adhérer",joinSideText:"Les petites idées<br>façonnent de grands avenirs.",
-    contactKicker:"06 / RESTONS EN CONTACT",contactTitle:"Restons <em>connectés.</em>",contactText:"Pour toute question, collaboration ou participation aux activités du club, n’hésitez pas à nous contacter.",emailLabel:"Adresse e-mail",socialPlaceholder:"Ajouter le lien officiel du compte",footerPhrase:"Penser la ville, construire l’avenir ensemble.",backTop:"Retour en haut ↑",footerNote:"COMMUNAUTÉ ÉTUDIANTE • PLANIFICATION • INNOVATION"
-  }
-};
-
-const languageSelect = document.getElementById("languageSelect");
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
-const toast = document.getElementById("toast");
-
-function setLanguage(lang) {
-  const dictionary = translations[lang] || translations.ar;
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-  document.body.dir = lang === "ar" ? "rtl" : "ltr";
-  document.querySelectorAll("[data-i18n]").forEach((node) => {
-    const key = node.dataset.i18n;
-    if (dictionary[key] !== undefined) node.textContent = dictionary[key];
-  });
-  document.querySelectorAll("[data-i18n-html]").forEach((node) => {
-    const key = node.dataset.i18nHtml;
-    if (dictionary[key] !== undefined) node.innerHTML = dictionary[key];
-  });
-  languageSelect.value = lang;
-  document.title = lang === "ar"
-    ? "URBAN PIONEERS CLUB | نادي رواد العمارة"
-    : lang === "fr"
-      ? "URBAN PIONEERS CLUB | Club étudiant d’urbanisme"
-      : "URBAN PIONEERS CLUB | Student Urbanism Club";
-  try { localStorage.setItem("upc-language", lang); } catch (_) {}
-}
-languageSelect.addEventListener("change", (event) => setLanguage(event.target.value));
-
-menuToggle.addEventListener("click", () => {
-  const open = mainNav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(open));
-  menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-});
-mainNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
-  mainNav.classList.remove("open");
-  menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "Open menu");
-}));
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 820) {
-    mainNav.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open menu");
-  }
-});
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    mainNav.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open menu");
-  }
-});
-
-document.querySelectorAll("[data-placeholder-link]").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    const label = link.dataset.placeholderLink === "instagram" ? "Instagram" : "Telegram";
-    toast.textContent = document.documentElement.lang === "ar"
-      ? `أضيفي رابط ${label} الرسمي في index.html قبل النشر.`
-      : document.documentElement.lang === "fr"
-        ? `Ajoutez le lien officiel ${label} dans index.html avant la publication.`
-        : `Add the official ${label} link in index.html before publishing.`;
-    toast.classList.add("show");
-    window.clearTimeout(window.__upcToastTimer);
-    window.__upcToastTimer = window.setTimeout(() => toast.classList.remove("show"), 3500);
-  });
-});
-document.getElementById("currentYear").textContent = new Date().getFullYear();
-
-let initialLanguage = "ar";
-try {
-  const saved = localStorage.getItem("upc-language");
-  if (saved && translations[saved]) initialLanguage = saved;
-} catch (_) {}
-setLanguage(initialLanguage);
-
-// Interactive learning games: specialty-to-task matching, collaboration scenario, and quick quiz.
-(() => {
-  const panel = document.getElementById('gamePanel');
-  if (!panel) return;
-  const title = document.getElementById('gameTitle');
-  const description = document.getElementById('gameDescription');
-  const content = document.getElementById('gameContent');
-  const feedback = document.getElementById('gameFeedback');
-  const check = document.getElementById('checkGame');
-  const reset = document.getElementById('resetGame');
-  const tabs = [...document.querySelectorAll('.game-tab')];
-  const games = {
-    match: {
-      title: 'اربط التخصص بالمهمة', desc: 'اختار التخصص الأقرب لكل مهمة حضرية.',
-      questions: [
-        {q:'إعداد مخطط استعمالات الأراضي وتنظيم توسع الحي؟', options:['العمران والتخطيط الحضري','الهندسة المعمارية','إدارة مشاريع البناء'], answer:0},
-        {q:'تصميم مبنى يراعي الوظيفة والراحة والشكل؟', options:['تسيير المدينة','الهندسة المعمارية','القاعدة المشتركة GTU'], answer:1},
-        {q:'تنسيق الميزانية والآجال والفرق في مشروع بناء؟', options:['إدارة مشاريع البناء','تسيير المدينة','العمران والتخطيط الحضري'], answer:0},
-        {q:'دراسة الشبكات والتجهيزات التقنية داخل المجال الحضري؟', options:['الهندسة الحضرية','الهندسة المعمارية','إدارة مشاريع البناء'], answer:0}
-      ]
-    },
-    scenario: {
-      title:'من يحتاج من؟', desc:'في كل سيناريو، اختار التخصصات التي يجب أن تتعاون لإنجاح المشروع.',
-      questions:[
-        {q:'إعادة تهيئة حي فيه طرق، مبانٍ، ومساحات خضراء.',options:['التخطيط الحضري + الهندسة المعمارية + الهندسة الحضرية','الهندسة المعمارية فقط','إدارة المشاريع فقط'],answer:0},
-        {q:'إنجاز مركز ثقافي ضمن ميزانية وآجال محددة.',options:['تسيير المدينة فقط','الهندسة المعمارية + إدارة مشاريع البناء','التخطيط الحضري فقط'],answer:1},
-        {q:'تحسين خدمات حي وربطها باحتياجات السكان.',options:['تسيير المدينة + التخطيط الحضري + الهندسة الحضرية','الهندسة المعمارية فقط','إدارة مشاريع البناء فقط'],answer:0},
-        {q:'طالب في السنة الأولى GTU يستكشف المسارات الممكنة.',options:['القاعدة المشتركة GTU تمهّد لفهم المسارات','يختار الهندسة المعمارية تلقائيًا','لا توجد علاقة بين المسارات'],answer:0}
-      ]
-    },
-    quiz: {
-      title:'اختبار سريع', desc:'أسئلة قصيرة حول العمل الحضري المشترك.',
-      questions:[
-        {q:'ما الهدف من التعاون بين التخصصات؟',options:['تقسيم العمل دون تواصل','دمج الخبرات لإيجاد حلول أفضل','إلغاء دور أحد التخصصات'],answer:1},
-        {q:'أي عنصر يجمع بين التخطيط والتصميم والتسيير؟',options:['المدينة والفضاء الحضري','مبنى منفرد فقط','الميزانية وحدها'],answer:0},
-        {q:'هل يمكن لمشروع حضري أن يحتاج أكثر من تخصص؟',options:['نعم، غالبًا لأن عناصر المدينة مترابطة','لا، تخصص واحد يكفي دائمًا','فقط في المشاريع الصغيرة'],answer:0},
-        {q:'ما أفضل طريقة للتعامل مع مشكلة حضرية معقدة؟',options:['تجاهل آراء التخصصات الأخرى','التعاون وتبادل البيانات والخبرات','الاعتماد على التخمين'],answer:1}
-      ]
+/* CITY BUILDER */
+const COLS = 10, ROWS = 8;
+const BLDGS = { house: { icon: '🏠', cost: 30, pop: 4, income: 5, happy: 2, green: 0, label: 'منزل' }, building: { icon: '🏢', cost: 80, pop: 20, income: 15, happy: 0, green: -2, label: 'مبنى' }, shop: { icon: '🏪', cost: 60, pop: 0, income: 25, happy: 5, green: -1, label: 'متجر' }, school: { icon: '🏫', cost: 120, pop: 0, income: -5, happy: 15, green: 3, label: 'مدرسة' }, hospital: { icon: '🏥', cost: 150, pop: 0, income: -8, happy: 20, green: 2, label: 'مستشفى' }, park: { icon: '🌳', cost: 40, pop: 0, income: 0, happy: 10, green: 10, label: 'حديقة' }, road: { icon: '🛣️', cost: 10, pop: 0, income: 0, happy: 0, green: -1, label: 'طريق' }, mosque: { icon: '🕌', cost: 90, pop: 0, income: 0, happy: 18, green: 1, label: 'مسجد' }, solar: { icon: '⚡', cost: 200, pop: 0, income: 20, happy: 5, green: 20, label: 'طاقة شمسية' }, office: { icon: '🏗️', cost: 130, pop: 0, income: 12, happy: 8, green: 0, label: 'بلدية' }, erase: { icon: '🗑️', cost: 0, pop: 0, income: 0, happy: 0, green: 0, label: 'هدم' } };
+let city = { money: 500, pop: 0, happy: 50, green: 0, income: 0, score: 0, level: 1, bldgs: 0, grid: Array(ROWS * COLS).fill(null), tool: 'house' };
+function initCity() { const g = document.getElementById('gGrid'); g.style.gridTemplateColumns = `repeat(${COLS},1fr)`; g.innerHTML = ''; for (let i = 0; i < ROWS * COLS; i++) {
+    const c = document.createElement('div');
+    c.className = 'g-cell';
+    c.id = 'gc-' + i;
+    c.onclick = () => buildOn(i);
+    g.appendChild(c);
+} }
+function selTool(t) { city.tool = t; document.querySelectorAll('.bld-btn').forEach(b => b.classList.remove('sel')); document.getElementById('bb-' + t).classList.add('sel'); const b = BLDGS[t]; document.getElementById('gmsg').textContent = t === 'erase' ? '🗑️ اضغط مبنىً لهدمه' : '📌 ' + b.label + ' — ' + b.cost + ' دج'; }
+function buildOn(idx) { const t = city.tool, ex = city.grid[idx]; if (t === 'erase') {
+    if (!ex) {
+        showToast('⚠️ الخلية فارغة');
+        return;
     }
-  };
-  let active = 'match';
-  function renderGame() {
-    const game = games[active];
-    title.textContent = game.title;
-    description.textContent = game.desc;
-    feedback.textContent = '';
-    feedback.className = 'game-feedback';
-    content.innerHTML = game.questions.map((item, i) => `<div class="game-question"><h4>${i+1}. ${item.q}</h4><div class="game-options">${item.options.map((opt,j)=>`<label class="game-option"><input type="radio" name="g${i}" value="${j}"> <span>${opt}</span></label>`).join('')}</div></div>`).join('');
-    tabs.forEach(t => t.classList.toggle('active', t.dataset.game === active));
-  }
-  tabs.forEach(tab => tab.addEventListener('click', () => { active = tab.dataset.game; renderGame(); }));
-  check.addEventListener('click', () => {
-    const game = games[active]; let score = 0; let answered = 0;
-    game.questions.forEach((item,i) => { const selected = content.querySelector(`input[name="g${i}"]:checked`); if (selected) { answered++; if (Number(selected.value) === item.answer) score++; }});
-    if (!answered) { feedback.textContent = 'اختار إجابة واحدة على الأقل ثم تحقق من النتيجة.'; feedback.className='game-feedback bad'; return; }
-    feedback.textContent = `نتيجتك: ${score} / ${game.questions.length} — أجبت عن ${answered} من ${game.questions.length}. ${score === game.questions.length ? 'ممتاز! فهمك للعلاقات بين التخصصات رائع.' : 'عاود جرّب، وركّز على تكامل الأدوار بين التخصصات.'}`;
-    feedback.className = `game-feedback ${score === game.questions.length ? 'good' : 'bad'}`;
-  });
-  reset.addEventListener('click', renderGame);
-  renderGame();
-})();
+    const r = Math.floor(BLDGS[ex.type].cost * .5);
+    remCell(idx, ex);
+    city.money += r;
+    showToast('🗑️ هُدم — ' + r + ' دج');
+    updCity();
+    return;
+} if (ex) {
+    showToast('⚠️ مشغولة!');
+    return;
+} const b = BLDGS[t]; if (city.money < b.cost) {
+    showToast('💸 تحتاج ' + b.cost + ' دج');
+    return;
+} city.money -= b.cost; city.grid[idx] = { type: t, icon: b.icon, label: b.label }; city.pop += b.pop; city.income += b.income; city.happy = Math.min(100, Math.max(0, city.happy + b.happy)); city.green = Math.min(100, Math.max(0, city.green + b.green)); if (t !== 'road' && t !== 'erase')
+    city.bldgs++; city.score += Math.floor(b.cost / 10) + 5; const cell = document.getElementById('gc-' + idx); cell.style.transform = 'scale(1.3)'; setTimeout(() => cell.style.transform = '', 200); cell.textContent = b.icon; if (t === 'road')
+    cell.classList.add('road'); const lbl = document.createElement('span'); lbl.className = 'cl'; lbl.textContent = b.label; cell.appendChild(lbl); chkLevel(); updCity(); showToast('✅ ' + b.label + '!'); }
+function remCell(idx, b) { const bt = BLDGS[b.type]; city.pop = Math.max(0, city.pop - bt.pop); city.income -= bt.income; city.happy = Math.max(0, city.happy - bt.happy); city.green = Math.max(0, city.green - bt.green); if (b.type !== 'road')
+    city.bldgs = Math.max(0, city.bldgs - 1); city.grid[idx] = null; const c = document.getElementById('gc-' + idx); c.innerHTML = ''; c.classList.remove('road'); c.style.background = ''; }
+function collectIncome() { const e = Math.max(0, city.income) + Math.floor(city.pop * .5); city.money += e; city.score += Math.floor(e / 5); chkLevel(); updCity(); showToast(e > 0 ? '💰 جمعت ' + e + ' دج!' : '⏳ دورة جديدة'); }
+function chkLevel() { const l = Math.floor(city.score / 100) + 1; if (l > city.level) {
+    city.level = l;
+    city.money += 100;
+    showToast('🎉 مستوى ' + l + '! +100 دج');
+} }
+function updCity() { document.getElementById('gm').textContent = city.money; document.getElementById('gp').textContent = city.pop; document.getElementById('gh').textContent = Math.round(city.happy); document.getElementById('gg').textContent = Math.round(city.green); document.getElementById('gbs').textContent = city.bldgs; document.getElementById('ginc').textContent = (city.income >= 0 ? '+' : '') + city.income; document.getElementById('gsc').textContent = city.score; document.getElementById('glv').textContent = city.level; }
+function resetCity() { city = { money: 500, pop: 0, happy: 50, green: 0, income: 0, score: 0, level: 1, bldgs: 0, grid: Array(ROWS * COLS).fill(null), tool: 'house' }; initCity(); updCity(); selTool('house'); showToast('🔄 مدينة جديدة!'); }
+/* QUIZ */
+const QS = [{ q: 'ما هو تعريف التخطيط الحضري؟', opts: ['تنظيم استخدام الأراضي في المدن', 'علم بناء الجسور', 'إدارة الغابات', 'تصميم الطائرات'], ans: 0, cat: '🌆 العمران' }, { q: 'ما هو نظام GIS؟', opts: ['نظام المعلومات الجغرافية', 'نظام الإضاءة الذكية', 'جهاز قياس الزلازل', 'برنامج 3D'], ans: 0, cat: '🗺️ هندسة حضرية' }, { q: 'ما الفرق بين PDAU و POS؟', opts: ['PDAU للمدينة كلها، POS لقطاع محدد', 'POS أكبر من PDAU', 'كلاهما متطابقان', 'PDAU يخص الريف'], ans: 0, cat: '🌆 العمران' }, { q: 'ما هي المدينة المستدامة؟', opts: ['مدينة تلبي احتياجات الحاضر دون الإضرار بالمستقبل', 'مدينة من مواد طبيعية', 'مدينة صغيرة', 'مدينة بلا سيارات'], ans: 0, cat: '🏙️ تسيير المدينة' }, { q: 'ما وظيفة مدير المشروع الحضري؟', opts: ['تنسيق الأطراف وضمان الجودة والوقت', 'رسم المخططات', 'بناء المباني', 'شراء مواد البناء'], ans: 0, cat: '📐 إدارة المشاريع' }, { q: 'ما هو التراث العمراني؟', opts: ['المباني ذات القيمة التاريخية والثقافية', 'كل المباني القديمة', 'المناطق الريفية', 'الحدائق'], ans: 0, cat: '🏛️ المعمار' }, { q: 'ما الذي تقيسه الكثافة السكانية؟', opts: ['عدد السكان لكل وحدة مساحة', 'مجموع السكان', 'سرعة نمو السكان', 'توزيع الأعمار'], ans: 0, cat: '🌆 العمران' }, { q: 'أي من هذه أداة GIS؟', opts: ['Buffer Analysis', 'Photoshop', 'AutoCAD', 'Excel'], ans: 0, cat: '🗺️ هندسة حضرية' }, { q: 'ما الحي المختلط الاستخدامات؟', opts: ['حي يجمع السكن والتجارة والخدمات', 'حي سكني', 'منطقة صناعية', 'حي تاريخي'], ans: 0, cat: '🌆 العمران' }, { q: 'ما وظيفة البلدية في تسيير المدينة؟', opts: ['إدارة الخدمات المحلية وتطوير المدينة', 'بناء الطرق فقط', 'إصدار الجوازات', 'إدارة المدارس'], ans: 0, cat: '🏙️ تسيير المدينة' }, { q: 'ما الخريطة الطبوغرافية؟', opts: ['تظهر التضاريس وارتفاعات الأرض', 'خريطة السياحة', 'خريطة المناخ', 'خريطة السكان'], ans: 0, cat: '🗺️ هندسة حضرية' }, { q: 'ما وظيفة المساحات الخضراء؟', opts: ['تحسين الهواء وصحة السكان', 'موقع بناء', 'مواقف سيارات', 'بيعها'], ans: 0, cat: '🌳 البيئة' }, { q: 'ما WBS في إدارة المشاريع؟', opts: ['هيكل تقسيم العمل', 'جدول الأسعار', 'خريطة طريق', 'متطلبات العميل'], ans: 0, cat: '📐 إدارة المشاريع' }, { q: 'ما مبدأ البناء الأخضر؟', opts: ['تقليل الموارد وإعادة استخدامها', 'تخفيض التكاليف فقط', 'الفوز بجوائز', 'استهلاك أكبر طاقة'], ans: 0, cat: '🏗️ البناء' }, { q: 'ما شعار نادي رواد العمارة؟', opts: ['Building Today. Leading Tomorrow.', 'Urban First.', 'Smart Cities.', 'Think Green.'], ans: 0, cat: '👥 النادي' }];
+let qIdx = 0, qSc = 0, qAns = false;
+function renderQ() { if (qIdx >= QS.length) {
+    document.getElementById('qBd').innerHTML = `<div style="text-align:center;padding:36px;color:#fff"><div style="font-size:56px">🏆</div><div style="font-size:20px;font-weight:800;margin:10px 0">النتيجة: ${qSc}/150</div><p style="color:rgba(255,255,255,.55);margin-bottom:20px">${qSc >= 120 ? 'ممتاز! رائد حضري حقيقي 🌟' : qSc >= 90 ? 'جيد جداً! واصل التعلم ⭐' : 'حاول مرة أخرى 💪'}</p><button class="xbtn xbtn-g" onclick="restartQ()" style="padding:9px 22px;font-size:13px">🔄 لعب من جديد</button></div>`;
+    document.getElementById('qNB').style.display = 'none';
+    return;
+} qAns = false; document.getElementById('qN').textContent = qIdx + 1; document.getElementById('qPF').style.width = ((qIdx + 1) / QS.length * 100) + '%'; document.getElementById('qCat').textContent = QS[qIdx].cat; document.getElementById('qNB').style.display = 'none'; const q = QS[qIdx]; document.getElementById('qBd').innerHTML = `<div class="quiz-cat">${q.cat}</div><div class="quiz-q">${q.q}</div><div class="quiz-opts">${q.opts.map((o, i) => `<button class="quiz-opt" onclick="ansQ(${i})" id="qo${i}">${o}</button>`).join('')}</div><div class="quiz-fb" id="qFb"></div>`; }
+function ansQ(i) { if (qAns)
+    return; qAns = true; document.querySelectorAll('.quiz-opt').forEach(b => b.disabled = true); const q = QS[qIdx], fb = document.getElementById('qFb'); if (i === q.ans) {
+    document.getElementById('qo' + i).classList.add('ok');
+    qSc += 10;
+    document.getElementById('qSc').textContent = qSc;
+    fb.textContent = '✅ صحيح!';
+    fb.style.cssText = 'background:rgba(45,120,74,.2);color:#7de8a6';
+}
+else {
+    document.getElementById('qo' + i).classList.add('no');
+    document.getElementById('qo' + q.ans).classList.add('ok');
+    fb.textContent = '❌ ' + q.opts[q.ans];
+    fb.style.cssText = 'background:rgba(180,60,60,.2);color:#f08080';
+} document.getElementById('qNB').style.display = 'flex'; }
+function nextQ() { qIdx++; renderQ(); }
+function restartQ() { qIdx = 0; qSc = 0; document.getElementById('qSc').textContent = 0; renderQ(); }
+/* ARCH */
+const AQ = [{ icon: '🏛️', q: 'ما نوع هذا المبنى؟', desc: 'أعمدة كلاسيكية وقبة', choices: [{ icon: '🏛️', name: 'مبنى حكومي/أكاديمي', desc: 'الحوكمة', ok: true }, { icon: '🏪', name: 'مركز تجاري', desc: 'التسوق', ok: false }, { icon: '🏭', name: 'مصنع', desc: 'الإنتاج', ok: false }, { icon: '🏨', name: 'فندق', desc: 'الإقامة', ok: false }] }, { icon: '🌆', q: 'ما يميز المدينة الذكية؟', desc: 'تقنيات رقمية وشاشات ذكية', choices: [{ icon: '💻', name: 'ربط الخدمات بـ IoT', desc: 'المدن الذكية', ok: true }, { icon: '🌿', name: 'زراعة في المباني', desc: 'عمودية', ok: false }, { icon: '🚀', name: 'نقل فضائي', desc: 'مستقبل', ok: false }, { icon: '⚡', name: 'بلا كهرباء', desc: 'مستدام', ok: false }] }, { icon: '🗺️', q: 'ما هذه الأداة؟', desc: 'خريطة رقمية بطبقات', choices: [{ icon: '🗺️', name: 'نظام GIS', desc: 'معلومات جغرافية', ok: true }, { icon: '📸', name: 'تصوير جوي', desc: 'صور', ok: false }, { icon: '📊', name: 'إحصائيات', desc: 'أرقام', ok: false }, { icon: '✏️', name: 'مخطط يدوي', desc: 'تقليدي', ok: false }] }, { icon: '🏙️', q: 'وظيفة مدير تسيير المدينة؟', desc: 'يشرف على الخدمات الحضرية', choices: [{ icon: '🏙️', name: 'إدارة الخدمات المحلية', desc: 'الحوكمة', ok: true }, { icon: '🏗️', name: 'بناء المباني', desc: 'إنشائي', ok: false }, { icon: '🎨', name: 'تصميم الشعارات', desc: 'بصري', ok: false }, { icon: '📚', name: 'التدريس', desc: 'أكاديمي', ok: false }] }, { icon: '🌳', q: 'وظيفة المساحات الخضراء؟', desc: 'حدائق ومتنزهات', choices: [{ icon: '🌳', name: 'تحسين الهواء والصحة', desc: 'البيئة', ok: true }, { icon: '🏗️', name: 'موقع بناء', desc: 'تطوير', ok: false }, { icon: '🅿️', name: 'مواقف سيارات', desc: 'بنية تحتية', ok: false }, { icon: '💰', name: 'بيعها', desc: 'تمويل', ok: false }] }, { icon: '📐', q: 'ما WBS؟', desc: 'هيكل يقسم المشروع', choices: [{ icon: '📐', name: 'هيكل تقسيم العمل', desc: 'Work Breakdown', ok: true }, { icon: '📊', name: 'جدول الأسعار', desc: 'الميزانية', ok: false }, { icon: '🗺️', name: 'خريطة طريق', desc: 'Roadmap', ok: false }, { icon: '📋', name: 'متطلبات العميل', desc: 'User Stories', ok: false }] }, { icon: '🏘️', q: 'ما هذا النوع من السكن؟', desc: 'منازل صغيرة بحدائق', choices: [{ icon: '🏘️', name: 'حي سكني شعبي', desc: 'سكن للأسر', ok: true }, { icon: '🏢', name: 'أحياء فاخرة', desc: 'سكن راقٍ', ok: false }, { icon: '🏭', name: 'منطقة صناعية', desc: 'مصانع', ok: false }, { icon: '🌆', name: 'مركز أعمال', desc: 'تجارة', ok: false }] }, { icon: '🌉', q: 'وظيفة هذا الإنشاء؟', desc: 'هيكل معدني يعبر نهراً', choices: [{ icon: '🌉', name: 'جسر للمرور', desc: 'ربط الضفتين', ok: true }, { icon: '🏗️', name: 'رافعة بناء', desc: 'تشييد', ok: false }, { icon: '⚡', name: 'برج طاقة', desc: 'كهرباء', ok: false }, { icon: '🗼', name: 'برج إذاعة', desc: 'بث', ok: false }] }, { icon: '🏗️', q: 'ما مرحلة البناء هذه؟', desc: 'هيكل خرساني بلا جدران', choices: [{ icon: '🏗️', name: 'هيكل العظم', desc: 'الإنشاء', ok: true }, { icon: '🏠', name: 'التشطيبات', desc: 'الديكور', ok: false }, { icon: '🏛️', name: 'التسليم', desc: 'النهاية', ok: false }, { icon: '📐', name: 'التصميم', desc: 'الرسم', ok: false }] }, { icon: '🏛️', q: 'ما الهندسة المعمارية؟', desc: 'فن وعلم تصميم المباني', choices: [{ icon: '🏛️', name: 'تصميم المباني والفضاءات', desc: 'المعمار', ok: true }, { icon: '🌐', name: 'إنترنت الأشياء', desc: 'التقنية', ok: false }, { icon: '🌿', name: 'الزراعة الحضرية', desc: 'الغذاء', ok: false }, { icon: '⚖️', name: 'القانون الحضري', desc: 'التشريع', ok: false }] }];
+let aIdx = 0, aSc = 0, aAns = false;
+function renderArch() { if (aIdx >= AQ.length) {
+    document.getElementById('aQ').innerHTML = `<div style="text-align:center;padding:18px;color:#fff"><div style="font-size:48px">🏆</div><h3 style="font-size:18px;margin:8px 0">النتيجة: ${aSc}/${AQ.length * 10}</h3><button class="xbtn xbtn-g" onclick="resetArch()" style="margin-top:12px">🔄 مجدداً</button></div>`;
+    document.getElementById('aCh').innerHTML = '';
+    document.getElementById('aNB').style.display = 'none';
+    return;
+} aAns = false; document.getElementById('aR').textContent = aIdx + 1; document.getElementById('aNB').style.display = 'none'; document.getElementById('aFb').textContent = ''; const q = AQ[aIdx]; document.getElementById('aQ').innerHTML = `<span class="arch-icon">${q.icon}</span><div class="arch-qt">${q.q}</div><div class="arch-qs">${q.desc}</div>`; document.getElementById('aCh').innerHTML = q.choices.map((c, i) => `<button class="arch-ch" onclick="ansArch(${i})" id="ac${i}"><span class="aci">${c.icon}</span><div class="acn">${c.name}</div><div class="acd">${c.desc}</div></button>`).join(''); }
+function ansArch(i) { if (aAns)
+    return; aAns = true; document.querySelectorAll('.arch-ch').forEach(b => b.disabled = true); const q = AQ[aIdx]; if (q.choices[i].ok) {
+    document.getElementById('ac' + i).classList.add('ok');
+    aSc += 10;
+    document.getElementById('aSc').textContent = aSc;
+    document.getElementById('aFb').textContent = '✅ ممتاز!';
+    showToast('✅ +10');
+}
+else {
+    document.getElementById('ac' + i).classList.add('no');
+    q.choices.forEach((c, j) => { if (c.ok)
+        document.getElementById('ac' + j).classList.add('ok'); });
+    document.getElementById('aFb').textContent = '❌ خطأ!';
+    showToast('❌ خطأ');
+} document.getElementById('aNB').style.display = 'flex'; }
+function nextArch() { aIdx++; renderArch(); }
+function resetArch() { aIdx = 0; aSc = 0; document.getElementById('aSc').textContent = 0; renderArch(); }
+/* PLAN */
+const PCOLS = ['#132240', '#1c3560', '#c8901a', '#2d7a4a', '#1b6e8c', '#7a4a2d', '#5a2d7a'];
+function updatePlan() { const h = +document.getElementById('ps-h').value, c = +document.getElementById('ps-c').value, g = +document.getElementById('ps-g').value, inf = +document.getElementById('ps-i').value, s = +document.getElementById('ps-s').value, m = +document.getElementById('ps-m').value; ['h', 'c', 'g', 'i', 's', 'm'].forEach((k, j) => { document.getElementById('pv-' + k).textContent = [h, c, g, inf, s, m][j]; }); const pop = Math.round((h * 120 + c * 30 + s * 50) / 100), happy = Math.round(g * .4 + s * .3 + inf * .2 + m * .1), econ = Math.round(c * .5 + inf * .3 + m * .2), env = Math.max(0, Math.round(g * .6 + h * .1 - c * .05 + s * .1)), gov = Math.round(m * .5 + s * .3 + inf * .2), total = Math.round((happy + econ + env + gov) / 4); const grade = total >= 85 ? 'A+' : total >= 75 ? 'A' : total >= 65 ? 'B+' : total >= 55 ? 'B' : total >= 45 ? 'C+' : 'C'; document.getElementById('pmPop').textContent = (pop > 999 ? Math.round(pop / 10) / 100 + 'K' : pop) + ''; document.getElementById('pmH').textContent = happy + '%'; document.getElementById('pmE').textContent = econ + '%'; document.getElementById('pmEn').textContent = env + '%'; document.getElementById('pmS').textContent = grade; document.getElementById('pmG').textContent = grade; document.getElementById('pSc').textContent = grade; const vis = document.getElementById('pVis'); vis.innerHTML = ''; const cnt = Math.min(Math.round(h / 12) + Math.round(c / 20) + Math.round(s / 25) + 1, 18); for (let i = 0; i < cnt; i++) {
+    const b = document.createElement('div');
+    b.className = 'plan-b';
+    b.style.cssText = `height:${20 + Math.random() * 58 + Math.round((i % 3 === 0 ? c : i % 3 === 1 ? h : s) / 4)}px;width:${Math.random() > .5 ? 17 : 23}px;background:${PCOLS[i % PCOLS.length]};opacity:.88;`;
+    vis.appendChild(b);
+} for (let i = 0; i < Math.round(g / 18); i++) {
+    const t = document.createElement('div');
+    t.style.cssText = 'font-size:16px;align-self:flex-end;margin:0 2px;';
+    t.textContent = '🌳';
+    vis.appendChild(t);
+} }
+function resetPlan() { ['h', 'c', 'g', 'i', 's', 'm'].forEach((k, j) => { document.getElementById('ps-' + k).value = [50, 30, 20, 40, 35, 25][j]; }); updatePlan(); }
+/* ACTIVITIES CMS */
+let acts = [{ title: 'التحليل الحضري', desc: 'قراءة المخططات وتحليل النسيج العمراني للمدن الجزائرية.', emoji: '🔬', type: 'ورشة عمل', date: 'أسبوعياً' }, { title: 'نظم GIS والخرائط', desc: 'تعلم وتطبيق نظم المعلومات الجغرافية وإنتاج خرائط تحليلية.', emoji: '🗺️', type: 'تدريب', date: 'أسبوعياً' }, { title: 'ورشة التصميم المعماري', desc: 'ورشات تطبيقية في التصميم ببرامج متخصصة.', emoji: '✏️', type: 'ورشة عمل', date: 'أسبوعياً' }, { title: 'المدن الذكية', desc: 'دراسة تجارب المدن الذكية وكيفية تطبيقها في السياق الجزائري.', emoji: '🌐', type: 'محاضرة', date: 'شهرياً' }, { title: 'المسابقات العلمية', desc: 'المشاركة في مسابقات معمارية وعمرانية وطنية ودولية.', emoji: '🏆', type: 'مسابقة', date: 'سنوياً' }, { title: 'الزيارات الميدانية', desc: 'زيارات لمشاريع إنشائية وورش حضرية.', emoji: '🚌', type: 'زيارة ميدانية', date: 'فصلياً' }];
+function renderActs() { const g = document.getElementById('actsGrid'); if (!acts.length) {
+    g.innerHTML = '<div class="no-acts">لا توجد أنشطة بعد.</div>';
+    return;
+} g.innerHTML = acts.map((a, i) => `<div class="act-card"><span class="act-emoji">${a.emoji}</span><h4>${a.title}</h4><p>${a.desc}</p><div class="act-meta"><span class="act-date">📅 ${a.date}</span><span class="act-badge">${a.type}</span></div></div>`).join(''); }
+function openModal() { document.getElementById('actModal').classList.add('open'); document.getElementById('mDate').valueAsDate = new Date(); }
+function closeModal() { document.getElementById('actModal').classList.remove('open'); }
+function saveAct() { const t = document.getElementById('mTitle').value.trim(); if (!t) {
+    showToast('⚠️ أدخل عنوان النشاط');
+    return;
+} const d = document.getElementById('mDate').value; acts.push({ title: t, desc: document.getElementById('mDesc').value || '—', emoji: document.getElementById('mSpec').value, type: document.getElementById('mType').value, date: d ? new Date(d).toLocaleDateString('ar-DZ', { year: 'numeric', month: 'long', day: 'numeric' }) : document.getElementById('mType').value }); renderActs(); closeModal(); showToast('✅ تم حفظ النشاط!'); }
+/* MISC */
+function toggleFAQ(btn) { btn.closest('.faq-item').classList.toggle('open'); }
+function swGame(id, btn) { document.querySelectorAll('.gpanel').forEach(p => p.classList.remove('active')); document.querySelectorAll('.gtab').forEach(t => t.classList.remove('active')); document.getElementById('gp-' + id).classList.add('active'); btn.classList.add('active'); }
+let toastT;
+function showToast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 2800); }
+/* SCROLL REVEAL */
+const ro = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting)
+    e.target.classList.add('visible'); }); }, { threshold: .08 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+/* STATS */
+function countUp(el, t, d) { let s = 0, st = t / 60, ti = setInterval(() => { s += st; if (s >= t) {
+    s = t;
+    clearInterval(ti);
+} el.textContent = Math.round(s); }, d / 60); }
+let counted = false;
+new IntersectionObserver(e => { if (e[0].isIntersecting && !counted) {
+    counted = true;
+    countUp(document.getElementById('sv1'), 17, 1200);
+    countUp(document.getElementById('sv2'), 13, 1200);
+} }, { threshold: .5 }).observe(document.querySelector('.stats-strip'));
+/* NAV */
+const mainNav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => mainNav.style.boxShadow = scrollY > 30 ? '0 4px 28px rgba(0,0,0,.3)' : 'none');
+function toggleNav() { document.getElementById('mobNav').classList.toggle('open'); }
+function closeNav() { document.getElementById('mobNav').classList.remove('open'); }
+/* INIT */
+window.addEventListener('load', () => { initCity(); updCity(); renderQ(); renderArch(); updatePlan(); renderActs(); });
